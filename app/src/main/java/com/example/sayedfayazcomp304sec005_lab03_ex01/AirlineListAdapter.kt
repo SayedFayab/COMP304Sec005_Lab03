@@ -19,7 +19,7 @@ class AirlineListAdapter(
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Schedule>() {
             override fun areItemsTheSame(oldItem: Schedule, newItem: Schedule): Boolean {
-                return oldItem.id == newItem.id
+                return oldItem.Id == newItem.Id
             }
 
             override fun areContentsTheSame(oldItem: Schedule, newItem: Schedule): Boolean {
