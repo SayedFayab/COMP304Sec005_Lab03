@@ -60,8 +60,6 @@ class AirlineScheduleDetailsFragment: Fragment() {
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val airlineListAdapter = AirlineListAdapter({})
-        // by passing in the stop name, filtered results are returned,
-        // and tapping rows won't trigger navigation
         recyclerView.adapter = airlineListAdapter
         lifecycle.coroutineScope.launch {
             viewModel.scheduleForAirlineName(airlineName).collect() {

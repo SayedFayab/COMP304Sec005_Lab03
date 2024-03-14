@@ -19,7 +19,7 @@ class AirlineListAdapter(
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Schedule>() {
             override fun areItemsTheSame(oldItem: Schedule, newItem: Schedule): Boolean {
-                return oldItem.Id == newItem.Id
+                return oldItem.id == newItem.id
             }
 
             override fun areContentsTheSame(oldItem: Schedule, newItem: Schedule): Boolean {
@@ -55,7 +55,7 @@ class AirlineListAdapter(
             binding.airlineNameTextView.text = schedule.airlineName
             binding.arrivalTimeTextView.text = SimpleDateFormat(
                 "h:mm a").format(
-                Date(schedule.arrivalTime.toLong() * 1000)
+                SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(schedule.arrivalTime)
             )
             binding.terminalTextView.text = schedule.terminal
         }
