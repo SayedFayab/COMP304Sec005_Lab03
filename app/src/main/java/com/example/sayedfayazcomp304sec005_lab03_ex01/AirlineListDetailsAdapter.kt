@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sayedfayazcomp304sec005_lab03_ex01.database.schedule.Schedule
+import com.example.sayedfayazcomp304sec005_lab03_ex01.databinding.AirlineListDetailsItemBinding
 import com.example.sayedfayazcomp304sec005_lab03_ex01.databinding.AirlineListItemBinding
 import java.text.SimpleDateFormat
 
@@ -29,7 +30,7 @@ class AirlineListDetailsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AirlineViewHolder {
         val viewHolder = AirlineViewHolder(
-            AirlineListItemBinding.inflate(
+            AirlineListDetailsItemBinding.inflate(
                 LayoutInflater.from( parent.context),
                 parent,
                 false
@@ -47,7 +48,7 @@ class AirlineListDetailsAdapter(
     }
 
     class AirlineViewHolder(
-        private var binding: AirlineListItemBinding
+        private var binding: AirlineListDetailsItemBinding
     ): RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SimpleDateFormat")
         fun bind(schedule: Schedule) {
