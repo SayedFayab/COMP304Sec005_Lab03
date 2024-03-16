@@ -57,9 +57,9 @@ class AirlineScheduleDetailsFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = binding.recyclerView
+        recyclerView = binding.recyclerViewAirlistdetails
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val airlineListAdapter = AirlineListAdapter({})
+        val airlineListAdapter = AirlineListDetailsAdapter({})
         recyclerView.adapter = airlineListAdapter
         lifecycle.coroutineScope.launch {
             viewModel.scheduleForAirlineName(airlineName).collect() {
