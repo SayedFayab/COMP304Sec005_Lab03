@@ -44,7 +44,7 @@ class AirListFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = binding.recyclerView
+        recyclerView = binding.recyclerViewAirlist
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val airlineAdapter = AirlineListAdapter({
             val action = AirListFragmentDirections

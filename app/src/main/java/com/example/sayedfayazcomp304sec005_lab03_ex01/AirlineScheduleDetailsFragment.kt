@@ -57,7 +57,7 @@ class AirlineScheduleDetailsFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = binding.recyclerView
+        recyclerView = binding.recyclerViewAirlistdetails
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val airlineListAdapter = AirlineListAdapter({})
         recyclerView.adapter = airlineListAdapter
